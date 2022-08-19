@@ -1,0 +1,262 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Haircut {% endblock %}
+
+{% block link %}
+<!-- add icon -->
+<link href="{% static 'icons/hairstyle.png'%}" rel="icon">
+{% endblock %}
+
+
+<!--iteams photo and detials-->
+{% block body %}
+
+
+<header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/homepage/9.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h2>HairStyles</h2>
+
+                    <a class="btn btn-danger" href="{% url 'haircut' %}" role="button"> HairCut</a>
+                    <a class="btn btn-warning" href="{% url 'beard' %}" role="button"> Beard </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+</header>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Deco Wing Bun Cuff</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Dress up your top knot with this tribal-inspired bun cuff</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Deco Wing Bun Cuff.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Waterfall Braid </h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">waterfall braid with a floral-like bun. The addition is not only
+                        stylish, but also romantic and brings even more interest to your hairstyle, so that you’ll
+                        look gorgeous from every angle.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/waterfall.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{ <div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Crown Braid</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">One of the most popular ways to rock a crown braid is with a halo
+                        approach. In other words, you use all of your hair to create the braid that wraps all the way
+                        around your head. You can make it as tight or messy as you want.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Crown Braid.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>hairband look</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Delve into the fabulous world of headband hairstyles! Hair accessories
+                        are always a great source of inspiration. They can completely change your look and take a
+                        boring, casual style to the level of an exciting chic look.
+
+                    </p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/hairband-look.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Side Ponytail </h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Side ponytail hairstyles definitely remind us of the iconic vintage
+                        80s and 90s fashion world and hairdos. The good news is – they are back in the fashion town
+                        with a bang, and we now spot the side ponytail looks everywhere.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Side-Ponytail.png'%} " data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3> Braided Bun </h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">There are quick and casual buns you make in a matter of minutes
+                        when you are short on time, and there are stylish variations of braided buns for a romantic
+                        date, night out with friends</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Braided Bun.png'%} " data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3> Ladder Braid </h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Ladder Braid In this instructable I'm going to teach you how to
+                        make a ladder braid! The ladder braid is a great hairstyle because it is simple to do but
+                        can fancy up a ponytaicess"</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Ladder-Braid.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>half up half down</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">The best thing about half-up half-down hairstyles is that they give
+                        you the best of both worlds. The style is practical, absolutely lovely, and suitable for
+                        daily errands and your nighttime events too.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/half-up-half-down.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>high pouf ponytail </h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">A high pouf ponytail is popular because it is so versatile and easy
+                        to
+                        do. Worn slick and straight, it is a perfect complement to a gown at a formal event, and its
+                        messy wavy version is a good idea for a fun and flippy casual look. </p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/high-pouf-ponytail.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Curly</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">The best thing about this hairstyle for long, curly hair is that
+                        it's, like, deceivingly easy to recreate. Just twist your curls into two loose and messy
+                        buns on either side of your part</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="{% static 'images/Curly.png'%}"
+                    data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

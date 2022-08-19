@@ -1,0 +1,152 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- add icons -->
+    <link href="{% static 'icons/register.png'%} " rel="icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/appointment.css'%}">
+
+    <title>appointment</title>
+</head>
+
+<body>
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <div class="form-header">
+                            <h1>Make your appointment</h1>
+                            <p>SHOP OPEN : 10am to 8pm</p>
+                        </div>
+                        <form action="{% url 'appointmenthandle' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Country, ZIP, city..."
+                                    name="destination"> <span class="form-label">Destination</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group"> <input class="form-control" type="date" name="date"
+                                            required> <span class="form-label">date</span> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"> <input class="form-control" type="time" name="time"
+                                            required> <span class="form-label">time</span> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group"> <select class="form-control" name="beard">
+                                            <option value="" selected hidden>beard</option>
+                                            <option>none</option>
+                                            <option>classic</option>
+                                            <option>Anchor</option>
+                                            <option>ducktail</option>
+                                            <option>Verdi</option>
+                                            <option>chin curtain</option>
+                                            <option>soul patch</option>
+                                            <option>french fork</option>
+                                            <option>sparrow</option>
+                                            <option>full growth</option>
+                                            <option>full goatee</option>
+
+                                        </select> <span class="select-arrow"></span> <span
+                                            class="form-label">beard</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group"> <select class="form-control" name="hairstyle">
+                                            <option value="" selected hidden>hairstyle</option>
+                                            <option>none</option>
+                                            <option>Crown Braid</option>
+                                            <option>hairband look</option>
+                                            <option>Deco Wing Bun Cuff</option>
+                                            <option>Waterfall Braid</option>
+                                            <option>Side Ponytail</option>
+                                            <option>Braided Bun</option>
+                                            <option>Ladder Braid</option>
+                                            <option>half up half down</option>
+                                            <option>high pouf ponytail</option>
+                                            <option>Curly</option>
+
+
+                                        </select> <span class="select-arrow"></span> <span
+                                            class="form-label">hairstyle</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group"> <select class="form-control" name="haircut">
+                                            <option value="" selected hidden>haircut</option>
+                                            <option>none</option>
+                                            <option>Feather cut</option>
+                                            <option>bob cut</option>
+                                            <option>wispy cut</option>
+                                            <option>A line cut</option>
+                                            <option>pixie cut</option>
+                                            <option>Bangs with Feather Cut</option>
+                                            <option>bangs with straight</option>
+                                            <option>bangs with straight</option>
+                                            <option>V cut</option>
+                                            <option>U cut</option>
+
+                                        </select> <span class="select-arrow"></span> <span
+                                            class="form-label">haircut</span> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group"> <input class="form-control" type="email"
+                                            placeholder="Enter your Email" name="email" required> <span
+                                            class="form-label">Email</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"> <input class="form-control" type="tel"
+                                            placeholder="Enter you Phone" name="phone" required> <span
+                                            class="form-label">Phone</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn"> <button class="submit-btn" type="submit">Book Now</button> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

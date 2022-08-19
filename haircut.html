@@ -1,0 +1,257 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Haircut {% endblock %}
+
+{% block link %}
+<!-- add icon -->
+<link href="{% static 'icons/haircut.png'%}" rel="icon">
+{% endblock %}
+
+<!--iteams photo and detials-->
+{% block body %}
+
+
+<header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/homepage/9.jpg'%}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h2>HairCut</h2>
+
+                    <a class="btn btn-danger" href="{% url 'hairstyle' %}" role="button"> HairStyle</a>
+                    <a class="btn btn-warning" href="{% url 'beard' %}" role="button"> Beard </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>wispy cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Wispy Cut This cropped, chin-length shag has loose, allover layers
+                        for volume with additional length at the crown, top, and sides, giving this silhouette its
+                        versatile looks.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%}" role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/wispy_cut.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>A line cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">An A-line haircut is a type of asymmetric cut that is shorter at
+                        the back and longer at the front. When viewed from above, the hair makes an 'A' shape. These
+                        haircuts are also referred to as 'stacked' or 'inverted'. </p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/A line cut.png.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Feather cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">A feather cut is typically cut in a V-shape using a razor, as the airy
+                        feathered hairstyles are a highly textured version of a layered cut – only better!</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src=" {% static 'images/feather.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>bob cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">A bob cut, also known as a bob, is a short to medium length haircut, in
+                        which the hair is typically cut straight around the head at approximately jaw level</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src=" {% static 'images/bob cut.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>pixie cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">A pixie cut is a classic short women’s haircut about 0.5 to
+                        3-inches long, but the number of its variants is huge! Find out more about its types and get
+                        a guide to choosing the right pixie hairstyle</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/pixie-cut.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>Bangs with Feather Cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Feathered bangs has been an absolute favorite among women of all
+                        ages and the best match for a feather haircut for many seasons already. If you have just
+                        decided to cut one</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src="{% static 'images/Bangs with Feather Cut.png'%} " data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>bangs with straight</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">Bangs are a perfect addition to shag haircuts. It’s a messy fringe
+                        hairdo with bangs that not only go across the forehead like traditional bangs but also frame
+                        your face blending with short side pieces. ... 35. Choppy Bangs. Let your bangs appear less
+                        heavy than the traditional straight-cut.</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src=" {% static 'images/bangs with straight.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3> diana cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto"> While a young Lady Diana Spencer once embraced long, pin-straight
+                        flaxen lengths, when she entered the public eye at 19 she debuted what would become The Lady
+                        Diana Haircut, a youthful riff on Farrah Fawcett</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
+                    src=" {% static 'images/diana cut.png'%}" data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>V cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto">you are looking for a fresh new look then why not try a V cut
+                        . They are styles that will give you a different angle to your cut then just
+                        straight across. We all want an awesome looking style</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="{% static 'images/V_cut.png'%}"
+                    data-holder-rendered="true">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">
+                        <h3>U cut</h3>
+                    </strong>
+
+
+                    <p class="card-text mb-auto"> you are looking for a fresh new look then why not try a
+                        U cut. They are styles that will give you a different angle to your cut then just
+                        straight across. We all want an awesome looking style</p>
+                    <a class="btn btn-outline-success" href="{% url 'appointment'%} " role="button"> Appointment </a>
+                </div>
+                <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                    alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src=" {% static 'images/U_cut.png'%}"
+                    data-holder-rendered="true">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
